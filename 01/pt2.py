@@ -23,16 +23,24 @@ for line in lines:
 
 left_list = []
 right_list = []
+# split line pairs into column lists and convert to integer:
 for pair in line_nums:
     left_list.append(int(pair[0]))
     right_list.append(int(pair[1]))
 
 
 similarity_list = []
+# this is basically the question AoC is asking us to solve.
+#  the built-in .count() method for lists does pretty much
+#  all of the work here.
+# Take each number in left_list, multiply it by the
+#  number of times it appears in right_list, and
+#  append to similarity_list.
 for num in left_list:
     similarity_list.append(num * right_list.count(num))
 
 answer = 0
+# Add up all the similarity scores:
 for num in similarity_list:
     answer += num
 

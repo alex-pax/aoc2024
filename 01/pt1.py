@@ -23,18 +23,22 @@ for line in lines:
 
 left_list = []
 right_list = []
+# split line pairs into column lists and convert to integer:
 for pair in line_nums:
     left_list.append(int(pair[0]))
     right_list.append(int(pair[1]))
 
-# sort lists from small to large:
+# sort both lists from small to large:
 left_list.sort()
 right_list.sort()
 
 diff_list = []
+# calc absolute value of difference between
+#  pairwise elements of sorted lists:
 for i in range(len(left_list)):
     diff_list.append(abs(left_list[i] - right_list[i]))
 
+# add 'em all up:    
 answer = 0
 for diff in diff_list:
     answer += diff
