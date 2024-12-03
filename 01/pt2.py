@@ -2,7 +2,7 @@ import re
 
 # open() creates a TextIOWrapper object
 # methods of TextIOWrapper are used to read data from the connection
-file_con = open('input.txt')
+file_con = open('01/input.txt')
 
 
 # .read() - a character string containing the entire contents of the file
